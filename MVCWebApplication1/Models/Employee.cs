@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MVCWebApplication1.Models
 {
+    [Table("Employees")]
     public class Employee
     {
-        public int EmployeeId { get; set; }
-        public string Name { get; set; }
-        public double Salary { get; set; }
-        public string Department { get; set; }
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int?  ManagerID { get; set; }
     }
 }

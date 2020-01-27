@@ -20,14 +20,25 @@
             <th>Salary</th>
             <th>Department</th>
         </tr>
-        @foreach(Employee emp in Model)
+        @foreach (Employee emp in Model)
         {
-        <tr>
-            <td>@emp.EmployeeId</td>
-            <td>@emp.Name</td>
-            <td>@emp.Salary</td>
-            <td>@emp.Department</td>
-        </tr>
+            int? ManagerId;
+            <tr>
+                <td>@emp.EmployeeID</td>
+                <td>@emp.FirstName</td>
+                <td>@emp.LastName</td>
+                @{
+                    if (@emp.ManagerID == null)
+                    {
+                        ManagerId = 0;
+                     }
+                     else
+                     {
+                        ManagerId = @emp.ManagerID;
+                     }
+                }
+                <td>@emp.ManagerID</td>
+            </tr>
         }
     </table>
 </body>
