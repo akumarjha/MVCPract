@@ -12,6 +12,7 @@ namespace MVCWebApplication1.Models
         public int EmployeeID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public Double Salary { get; set; }
         public int?  ManagerID { get; set; }
     }
 }
